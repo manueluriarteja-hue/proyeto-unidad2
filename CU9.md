@@ -1,7 +1,7 @@
 ```mermaid
     sequenceDiagram
     actor Alumno as Tutorado
-    participant Sist as Sistema SGPT
+    participant Sist as Sistema de Tutorías
 
     Alumno->>Sist: 1. Accede a 'Mis actividades' y selecciona actividad 'Pendiente'
     Sist-->>Alumno: 2. Muestra requisitos de evidencia y fecha límite
