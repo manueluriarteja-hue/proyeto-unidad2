@@ -1,12 +1,12 @@
 ```mermaid
     sequenceDiagram
-    actor Coordinador as Coordinador Institucional
-    participant Sistema as Sistema de Tutorías (SGPT)
+    actor Coord as Coordinador Institucional
+    participant Sist as Sistema SGPT
 
-    Coordinador->>Sistema: 1. Accede a Gestión de Usuarios y selecciona 'Registrar nuevo usuario'
-    Sistema-->>Coordinador: 2. Despliega el formulario de alta
-    Coordinador->>Sistema: 3. Ingresa datos generales y selecciona el rol
-    Coordinador->>Sistema: 4. Presiona el botón 'Guardar'
-    Sistema->>Sistema: 5. Valida datos correctos y no duplicidad
-    Sistema->>Sistema: 6. Genera credenciales y envía correo
-    Sistema-->>Coordinador: 7. Muestra mensaje "Usuario registrado exitosamente"
+    Coord->>Sist: 1. Accede a Gestión de Usuarios y selecciona 'Registrar nuevo usuario'
+    Sist-->>Coord: 2. Despliega el formulario de alta
+    Coord->>Sist: 3. Ingresa datos generales y selecciona rol (Tutor, Tutorado, etc.)
+    Coord->>Sist: 4. Confirma registro presionando 'Guardar'
+    Sist->>Sist: 5. Valida que no exista duplicado de matrícula/número de control
+    Sist->>Sist: 6. Genera credenciales temporales y envía al correo institucional
+    Sist-->>Coord: 7. Muestra mensaje "Usuario registrado exitosamente" y resumen
