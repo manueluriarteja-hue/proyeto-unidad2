@@ -1,7 +1,7 @@
 ```mermaid
     sequenceDiagram
-    actor Coord as Coordinador Institucional
-    participant Sist as Sistema SGPT
+    actor Coord as COORDINADOR INSTITUCIONAL
+    participant Sist as SISTEMA DE TUTORIAS
 
     Coord->>Sist: 1. Accede a Gestión de Usuarios y selecciona 'Registrar nuevo usuario'
     Sist-->>Coord: 2. Despliega el formulario de alta
