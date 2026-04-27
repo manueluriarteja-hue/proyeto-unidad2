@@ -1,14 +1,13 @@
-```mermaid
-    sequenceDiagram
-    actor Coord as Coordinador del PT
+sequenceDiagram
+    actor Coord as Coordinador PT / Jefe Depto
     participant Sist as Sistema SGPT
-    actor Tutor as Tutores Asignados
+    actor Tutor as Tutor
 
-    Coord->>Sist: 1. Accede a 'Planificación del PT', selecciona periodo y 'Nueva actividad'
-    Sist-->>Coord: 2. Despliega formulario de registro de actividad
-    Coord->>Sist: 3. Ingresa datos (nombre, fase, tipo) y define si requiere evidencia
-    Coord->>Sist: 4. Asigna la actividad (a todos, por carrera o específico)
-    Coord->>Sist: 5. Guarda actividad presionando 'Registrar actividad'
-    Sist->>Sist: 6. Valida datos y registra la actividad en el semestre
-    Sist-->>Coord: 7. Confirma el registro exitoso
-    Sist-->>Tutor: 8. Notifica sobre la nueva actividad asignada
+    Coord->>Sist: 1. Accede a 'Asignación de grupos', selecciona periodo y busca tutor
+    Sist-->>Coord: 2. Muestra perfil del tutor y asignaciones actuales
+    Coord->>Sist: 3. Selecciona grupo, define horario (día/horas) y asigna salón
+    Coord->>Sist: 4. Confirma asignación ('Guardar asignación')
+    Sist->>Sist: 5. Valida que no exista conflicto de horario ni sobrecarga
+    Sist->>Sist: 6. Registra la asignación
+    Sist-->>Coord: 7. Muestra confirmación de asignación
+    Sist-->>Tutor: 8. Notifica vía correo detalles del grupo, horario y salón
